@@ -1,0 +1,83 @@
+/* Hide sidebar in reader mode */
+#reader-toolbar, #reader-toolbar  button {
+    background-color: #333333 !important;
+}
+
+@media screen and (max-width: 720px) {
+  #reader-toolbar {
+    display: none !important;
+  }
+}
+
+/* newtab page background */
+@-moz-document url(about:newtab) {
+  #root {
+	 background-color: #333333 /*#322e2e*/ !important;
+  }
+}
+/* Shrink the reddit sidebar */
+@-moz-document domain(www.reddit.com) {
+  @media screen and (max-width: 720px) {
+    .side {
+      display: none !important;
+    }
+    
+    .commentarea {
+      width: 100% !important;
+    }
+    
+    .linklisting {
+      width: 100% !important;
+      margin-left: 0 !important;
+    }
+    
+    .expando {
+      padding-right: 2vw !important;
+    }
+    
+    .content {
+      width: 94vw !important;
+      margin-left: 2vw !important;
+      margin-right: 2vw !important;
+    }
+  }
+  
+  /* Hide the hideously huge "Post a comment!" box, this means you can't click
+   * it to log in to post a comment.
+   */
+  .commentsignupbar {
+    display: none !important;
+  }
+
+  /* Hide signup listing when not logged in */
+  .listingsignupbar {
+    display: none !important;
+  }
+}
+
+/* Hide huge cursor magnet Rust logo on r/rust */
+@-moz-document url-prefix(https://www.reddit.com/r/rust) {
+  /* looks */
+  body {
+    background-image: none !important;
+  }
+  /* actual annoying behavior */
+  .redditname {
+    display: none !important;
+  }
+}
+
+/* Wire app hide sidemenu when narrow window */
+@-moz-document domain(app.wire.com) {
+  @media screen and (max-width: 720px) {
+    #left-column {
+      display: none !important;
+    }
+    #conversation {
+      max-width: 85% !important;
+    }
+    .message {
+      width: 100% !important;
+    }
+  }
+}
