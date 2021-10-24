@@ -10,11 +10,12 @@
 }
 
 /* newtab page background */
-@-moz-document url(about:newtab) {
-  #root {
-	 background-color: #333333 /*#322e2e*/ !important;
-  }
-}
+// @-moz-document url(about:newtab) {
+//   #root {
+// 	 background-color: #333333 /*#322e2e*/ !important;
+//   }
+// }
+
 /* Shrink the reddit sidebar */
 @-moz-document domain(www.reddit.com) {
   @media screen and (max-width: 720px) {
@@ -75,6 +76,30 @@
     }
     #conversation {
       max-width: 85% !important;
+      background-color: #333333 !important;
+      color: #cfcfcf !important;
+    }
+    #conversation-title-bar, #conversation-input-bar, .conversation-input-bar__input {
+      background-color: #303030 !important;
+      color: #888888 !important;
+    }
+    ::placeholder {
+      color: #aaaaaa !important;
+    }
+    #conversation-input-bar-text {
+      color: #d0d0d0 !important;
+      caret-color: #d0d0d0 !important;
+    }
+    .message-header-label-sender {
+      color: #888888 !important;
+    }
+    .context-menu, .time, .message-status {
+      background-color: #333333 !important;
+      color: #b8b8b8 !important;
+    }
+    .message-timestamp-unread>.message-header-label {
+      border-color: #666666 !important;
+      border-bottom-style: solid !important;
     }
     .message {
       width: 100% !important;
